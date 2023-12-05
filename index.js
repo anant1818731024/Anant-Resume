@@ -1,4 +1,5 @@
 const handleProjectClick = (project) => {
+    console.log("function called");
     let urlToOpen
     switch(project){
         case "fixedPeriodMock":
