@@ -527,6 +527,9 @@ button:focus {
     .timeline-mobile{
         display: none;
     }
+    .projects{
+        width: 75%;
+    }
   }
   
   .timeline-mobile-box{
@@ -560,4 +563,12 @@ button:focus {
     #contact-form-container{
         width: 90%;
     }
+  }
+
+  .projects{
+    display: block;
+  }
+
+  .cursor-pointer{
+    cursor: pointer;
   }
