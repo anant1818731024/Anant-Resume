@@ -20,6 +20,9 @@ const handleNavClick = (e) => {
     const section = e?.target?.href?.split("#")[1];
 
     const yCoordinate = document?.getElementById(section)?.getBoundingClientRect()?.y;
+    if(!yCoordinate){
+        return;
+    }
 
     let currentScroll = 0;
 
