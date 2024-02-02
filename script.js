@@ -35,3 +35,38 @@ const handleNavClick = (e) => {
         window.scrollBy(0, 10);
     },5)
 }
+
+const fillBar = (bar, targetWidth) => {
+    let currentWidth = 0;
+    const interval = setInterval(() => {
+        if(currentWidth == targetWidth){
+            clearInterval(interval);
+        }
+        currentWidth += 1;
+        bar.style.width = currentWidth + "%";
+    },10)
+}
+
+const fillBars = () => {
+    const bars = document.querySelectorAll("#skills-list > div > div");
+    for(let bar of bars){
+        fillBar(bar, bar.getAttribute("data-bar-width"))
+    }
+}
+let isSkillsSectionLoaded = false;
+const handleScroll = () => {
+    console.log("scrolling");
+    
+    const skillsContainer = document.getElementById("skills-list");
+    if(!isSkillsSectionLoaded && skillsContainer.getBoundingClientRect().top < window.innerHeight){
+        console.log("skill section loaded");
+        isSkillsSectionLoaded = true;
+        fillBars();
+    }
+
+    if(skillsContainer.getBoundingClientRect().top > window.innerHeight){
+        isSkillsSectionLoaded= false;
+    }
+}
+
+window.addEventListener("scroll", handleScroll);

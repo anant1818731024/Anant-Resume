@@ -141,26 +141,28 @@ section{
 }
 
 .twenty-five-percent{
-    width:25%;
+    /* width:25%; */
     background-color:blueviolet;
 }
 .fifty-percent{
-    width:50%;
+    /* width:50%; */
     background-color:blue;
 }
 .seventy-five-percent{
-    width:75%;
+    /* width:75%; */
     background-color: blueviolet;
 }
 .eighty-five-percent{
-    width:85%;
+    /* width:85%; */
     background-color:orange;
 }
 .hundred-percent{
-    width:100%;
+    /* width:100%; */
     background-color:darkred;
 }
-
+#skills-list > div > div{
+    width: 0%;
+}
 section{
     width: 100%;
     display: flex;
